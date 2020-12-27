@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <H2>restaurants Details</H2><hr>
+        <p>restaurants ID: <%= restaurant.restaurant_id %></p>
+        <p>name:           <%= restaurant.restaurant_name %></p>
+	<p>borough: <%= restaurant.borough%></p>
+	<p>cusine: <%= restaurant.cusine%></p>
+	<p>address: <%= restaurant.address%></p>
+	<p>photo: <%= restaurant.photo%></p>
+	<p>photomimetytpe: <%= restaurant.photomimetytpe%></p>
+	<p>grades: <%= restaurant.grades%></p>
+	<p>owner: <%= restaurant.owner%></p>
+	
+        <% if (restaurant.photo) { %>
+            <img src="data:image/jpg;base64, <%= restaurant.photo %>"><br>
+        <% } %>
+
+        <a href="/edit?_id=<%= restaurant._id %>">edit</a><br>
+        <a href="/">home</a>
+    </body>
+</html>
